@@ -1,0 +1,119 @@
+@import url('https://fonts.googleapis.com/css2?family=PT+Sans+Narrow&family=Poppins:wght@200;400&display=swap');
+
+* {
+  box-sizing: border-box;
+}
+
+p {
+  margin: 0;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin: 0;
+  font-family: "Poppins", sans-serif;
+  text-align: center;
+  background-color: rgb(44, 145, 204);
+}
+
+.title {
+  margin: 3rem 0  0.25rem;
+  font-size: 2.5rem;
+  color: #ffffff;
+}
+
+.subtitle {
+  color: #ffffff;
+}
+
+.bottle {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  width: 150px;
+  height: 300px;
+  margin: 30px auto;
+  background-color: #ffffffc8;
+  border: 5px solid rgb(16, 95, 141);
+  border-radius: 40px;
+  overflow: hidden;
+}
+
+.bottle__reminder {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  height: 100%;
+  margin: 0;
+  line-height: 0.9;
+  text-align: center;
+}
+
+.bottle__goal {
+  margin: 0;
+  font-size: 1.2rem;
+  line-height: 0.9;
+}
+
+.bottle__text {
+  font-size: 0.8rem;
+  line-height: 0.9;
+}
+
+.watter {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  min-height: 0;
+  background-color: rgba(13, 91, 238, 0.504);
+  transition: min-height 0.1s;
+}
+
+.watter__text {
+  font-size: 1.3rem;
+}
+
+.cups {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  width: 300px;
+}
+
+.cup {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 50px;
+  height: 80px;
+  margin: 0.5rem;
+  background-color: #ffffffc8;
+  border: 4px solid rgb(16, 95, 141);
+  border-radius: 0 0 20px 20px;
+  user-select: none;
+  overflow: hidden;
+}
+
+.cup:hover {
+  cursor: pointer;
+}
+
+.cup::before {
+  position: absolute;
+  bottom: -100%;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(13, 91, 238, 0.504);
+  transition: bottom 0.1s;
+  content: "";
+}
+.cup.active::before {
+  bottom: 0;
+}
